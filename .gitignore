@@ -1,0 +1,39 @@
+```text
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.ai-tools/
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+
+# Generated video files
+output/
+
+# Large input files
+input/*.mp4
+input/*.mov
+input/*.mkv
+input/*.avi
+
+# Generated AI data
+transcript.json
+clip_candidates.json
+top_clips.json
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
+```
