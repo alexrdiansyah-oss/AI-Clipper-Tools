@@ -3,6 +3,7 @@ import sys
 import os
 import time
 
+from src.progress import show_progress
 
 # ======================================
 # CONFIGURATION
@@ -10,41 +11,14 @@ import time
 
 STEPS = [
     ("Transcribing video", "src/transcriber.py"),
-    ("Detecting clips", "src/clip_detector.py"),
+    ("Detecting clips", "src/clip-detector.py"),
     ("Ranking clips", "src/clip-rank.py"),
-    ("Cutting videos", "src/video_editor.py"),
-    ("Formatting Shorts", "src/shorts_formatter.py"),
-    ("Generating subtitles", "src/subtitle_generator.py"),
-    ("Burning subtitles", "src/subtitle_burner.py"),
+    ("AI ranking clips", "src/ai-clip-rank.py"),
+    ("Cutting videos", "src/video-editor.py"),
+    ("Formatting Shorts", "src/shorts-formatter.py"),
+    ("Generating subtitles", "src/subtitle-generator.py"),
+    ("Burning subtitles", "src/subtitle-burner.py"),
 ]
-
-
-# ======================================
-# PROGRESS
-# ======================================
-
-def show_progress(current, total, prefix="Progress"):
-
-    bar_length = 30
-
-    percent = current / total
-
-    filled = int(
-        bar_length * percent
-    )
-
-    bar = (
-        "█" * filled
-        + "░" * (bar_length - filled)
-    )
-
-    percentage = percent * 100
-
-    print(
-        f"{prefix}: [{bar}] "
-        f"{percentage:.0f}%"
-    )
-
 
 # ======================================
 # RUN STEP

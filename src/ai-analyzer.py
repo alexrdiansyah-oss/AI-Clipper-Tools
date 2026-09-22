@@ -84,7 +84,7 @@ Jangan tambahkan markdown atau penjelasan lain.
 # =========================
 
 response = client.responses.create(
-    model="gpt-5.6-luna",
+    model="gpt-5.6-sol",
     input=prompt
 )
 
